@@ -77,6 +77,8 @@ dialog.  That dialog offers a way to filter by programming language,
 and if you choose Rust from that dropdown control, you will see the
 available templates.
 
+![screenshot](sgrust_new_project.png)
+
 These templates will create a `Cargo.toml` file for you.
 
 ## Open a Cargo.toml file as a project
