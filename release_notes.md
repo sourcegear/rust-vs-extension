@@ -9,17 +9,15 @@ be free of charge.
 In the future, we plan to offer both free and commercial editions 
 of this extension.
 
-## 0.5
-
-TODO date
+## 0.5 -- (TODO date)
 
 Initial public preview release, with a very basic feature set:
 
 - Intellisense features (using rust-analyzer)
-- Project system (.rsproj)
+- Project file (`.rsproj`) wrapping `Cargo.toml`
 - Build, Rebuild, etc
 - Debugging
-- Syntax coloring for .rs and .toml
+- Syntax coloring for `.rs` and `.toml`
 - Templates for new Rust projects
-- Open existing Cargo.toml as a project
+- Open existing `Cargo.toml` as a project
 

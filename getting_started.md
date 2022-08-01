@@ -34,8 +34,8 @@ be available the next time you launch Visual Studio.
 The current version of SourceGear Rust expects
 the Rust development tools to be installed separately.
 These tools include the Rust compiler and its package
-manager and various other things to support development
-with Rust.
+manager (Cargo) and various other things to support 
+development with Rust.
 
 The standard tool for managing a Rust installation
 is called `rustup`:
@@ -63,11 +63,11 @@ looks like this:
 </Project>
 ```
 
-The file is simple because all it really does is delegate
-all the work to Cargo.
+And the reason this file is simple is because all it really 
+does is delegate all the work to Cargo.
 
-Key point:  SourceGear Rust does not replace `Cargo.toml` -- it merely
-provides a "wrapper" around it.
+Key point:  SourceGear Rust does not replace `Cargo.toml` or duplicate
+its contents-- it merely provides a "wrapper" around it.
 
 ## Create a new project from a template
 
@@ -82,6 +82,6 @@ These templates will create a `Cargo.toml` file for you.
 ## Open a Cargo.toml file as a project
 
 If you already have a `Cargo.toml` file,
-you can open simply it as a Visual Studio project.
+you can simply open it as a Visual Studio project.
 SourceGear Rust will automatically create an adjacent `.rsproj` file.
 
