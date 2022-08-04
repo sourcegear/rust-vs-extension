@@ -9,7 +9,7 @@ be free of charge.
 In the future, we plan to offer both free and commercial editions 
 of this extension.
 
-## 0.5 -- (TODO date)
+## 0.5 -- (04-August-2022)
 
 Initial public preview release, with a very basic feature set:
 
