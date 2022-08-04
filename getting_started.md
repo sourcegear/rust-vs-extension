@@ -15,7 +15,7 @@ Visual Studio extensions, and such a file is often referred to as "a VSIX",
 One way to install SourceGear Rust is to download the VSIX
 from the Visual Studio Marketplace website:
 
-https://marketplace.visualstudio.com/
+https://marketplace.visualstudio.com/items?itemName=SourceGear.SourceGearRust
 
 Close Visual Studio itself, and then open the VSIX file, which will bring up 
 the VSIX Installer.  This will configure the extension for your installation
