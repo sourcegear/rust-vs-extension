@@ -1,5 +1,7 @@
 # Getting Started
 
+This guide is current as of preview version 0.6.
+
 ## Install the extension
 
 SourceGear Rust is available in the Visual Studio
@@ -47,43 +49,110 @@ at the default location, which is `$(UserProfile)\.cargo\bin\`.
 
 ## About Rust projects in Visual Studio
 
-Visual Studio users are familiar with the notion of a "project file".
-For example, C# developers have project files ending in `.csproj`,
-and C++ developers have project files ending in `.vcxproj`.
-These files use "MSBuild", the underlying build system for
-Visual Studio.
+As of preview version 0.6, SourceGear Rust is based on Visual Studio's "Open Folder"
+mode instead of project files and solutions.  This mode was
+added to Visual Studio to support build environments which have
+their own build system and therefore do not benefit from MSBuild.
+Other examples of extensions which use Open Folder include
+CMake, node.js, and Python.
 
-For Rust projects, we create a project file ending in `.rsproj`,
-but the contents of this file are very simple.  It basically
-looks like this:
+Because the New Project templates feature from 0.5 was based on
+project files, this feature has been removed in 0.6.  We are
+working to bring it back in a future release.
 
-```
-<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="SourceGear.Rust">
-</Project>
-```
+To open a Rust project in Visual Studio, in the dialog box
+where Visual Studio asks "What would you like to do?", choose
+the "Open a local folder" button.
 
-And the reason this file is simple is because all it really 
-does is delegate all the work to Cargo.
+![screenshot](vs_open_folder.png)
 
-Key point:  SourceGear Rust does not replace `Cargo.toml` or duplicate
-its contents-- it merely provides a "wrapper" around it.
+Navigate to the folder containing your Cargo.toml file, and
+click the Select Folder button.
 
-## Create a new project from a template
+![screenshot](vs_select_folder.png)
 
-Like most language integrations for Visual Studio, SourceGear Rust includes 
-several project templates which can be used from the "Create a new project"
-dialog.  That dialog offers a way to filter by programming language,
-and if you choose Rust from that dropdown control, you will see the
-available templates.
+Note that Visual Studio's Open Folder mode can open any folder, 
+regardless of
+what extensions are present.  The SourceGear Rust extension
+recognizes the Cargo.toml and Rust language files and provides Rust-specific features, such as the ability
+to build and debug, etc.
 
-![screenshot](sgrust_new_project.png)
+## Intellisense
 
-These templates will create a `Cargo.toml` file for you.
+SourceGear Rust includes support for rust-analyzer to provide
+Intellisense-style features.  For example, in the following
+screenshot, after typing the dot after `s`, a list of
+possibilities is displayed.
 
-## Open a Cargo.toml file as a project
+![screenshot](sgrust_rusqlite_intellisense.png)
 
-If you already have a `Cargo.toml` file,
-you can simply open it as a Visual Studio project.
-SourceGear Rust will automatically create an adjacent `.rsproj` file.
+Currently, a copy of the rust-analyzer executable is being bundled within
+the SourceGear Rust VSIX.  In the future, we plan to provide
+the option of using one installed by rustup.
+
+## Rust View
+
+When using Open Folder mode, the Solution Explorer provides
+Folder View, which shows the files and folders in the
+folder you opened.  Right-click on items to see a context
+menu which contain appropriate operations.
+
+SourceGear Rust provides an alternate view which shows
+the hierarchy of Cargo packages, targets, and dependencies.
+Most of the items
+in this view do not correspond to files or folders in the
+file system.
+
+To reach this view, there is a button on the Solution Explorer
+toolbar which allows you to switch between available views:
+
+![screenshot](vs_change_views_button.png)
+
+When you click this button, you should see a list of views,
+and Rust View should be one of them:
+
+![screenshot](vs_views.png)
+
+If you choose Rust View, you should now see a hierarchy of
+Cargo packages and targets and so on.  
+
+![screenshot](sgrust_rust_view_bevy.png)
+
+In the screenshot above, the Cargo workspace for the bevy project 
+contains a number of
+packages.  The top-level package is called `bevy`, and it
+contains a library target (also called `bevy`), several
+dependencies, some example targets, and some tests.
+
+One thing you can do from Rust View is set which target is
+designated for debugging.  Open the Examples folder, right
+click on the "3d\_shapes" target, and the context menu should
+include the "Set as Startup Project" menu item.  Choosing this
+will set the Startup Item in the Visual Studio toolbar accordingly.
+
+![screenshot](sgrust_debug_target_toolbar.png)
+
+Tapping the launch button to start the debugger should cause
+the "3d\_shapes" example to be built and launched.
+
+## Tests
+
+Version 0.6 adds preliminary support for integrating
+Cargo tests with the Visual Studio Test Explorer.  If you
+open the Test Explorer window with SourceGear Rust active,
+it supports discovery of tests as well as running the tests
+and reporting results.
+
+The following screenshot shows Test Explorer having run all
+the tests in the Wasmtime tree:
+
+![screenshot](sgrust_test_explorer_wasmtime.png)
+
+## Error List
+
+Version 0.6 adds preliminary support for showing Rust compiler
+errors in the Visual Studio Error List.
+
+![screenshot](sgrust_error.png)
+
 
