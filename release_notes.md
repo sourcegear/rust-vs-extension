@@ -1,5 +1,7 @@
 # Release notes
 
+For an overview of the features of SourceGear Rust, see [Getting Started](getting_started.md).
+
 We are actively working on new features
 for upcoming releases.
 

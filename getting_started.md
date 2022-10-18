@@ -2,6 +2,8 @@
 
 This guide is current as of preview version 0.6.
 
+For a list of highlights about each release, see the [Release Notes](release_notes.md).
+
 ## Install the extension
 
 SourceGear Rust is available in the Visual Studio
