@@ -33,3 +33,7 @@ or, as in this example, as a sibling to `Cargo.toml`.
 - `name` must be the same as projectTarget, except with "Bin: " or "Example: ", to indicate what kind of target.  Note the space after the colon.
 - `args` is a json array of strings, which will be the arguments passed to the executable being debugged
 
+The `launch.vs.json` feature is documented at:
+
+https://learn.microsoft.com/en-us/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio?view=vs-2022
+
