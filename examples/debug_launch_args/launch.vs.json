@@ -1,0 +1,18 @@
+{
+  "version": "0.2.1",
+  "defaults": {
+  },
+  "configurations": [
+    {
+      "type": "default",
+      "name": "Bin: debug_launch_args/debug_launch_args",
+      "project": "Cargo.toml",
+      "projectTarget": "debug_launch_args/debug_launch_args",
+      "args": 
+      [ 
+          "--flag",
+          "value"
+      ]
+    }
+  ]
+}
