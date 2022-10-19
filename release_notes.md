@@ -22,6 +22,7 @@ Still rough.  Released to show direction and progress:
 - Initial integration of Cargo tests with Test Explorer
 - Comment/Uncomment for Rust code in editor
 - Project template features temporarily removed
+- No longer requires admin privileges to install
 
 ## 0.5 -- (04-August-2022)
 
