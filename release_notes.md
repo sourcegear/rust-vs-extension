@@ -3,16 +3,12 @@
 SourceGear Rust is an extension for Visual Studio 2022.
 
 - Intellisense features (using rust-analyzer)
+- Syntax coloring for .rs and .toml
 - Build, Rebuild, etc
 - Debugging
-- Syntax coloring for .rs and .toml
-- Based on Visual Studio's Open Folder mode
 - Rust View, showing Cargo package/target/dependency hierarchy
-- Show Rust compiler error messages in Visual Studio Error List
-- Support for cargo workspaces with multiple packages
 - Template to create a new project
-- Features to manage the installation of Rust tools from within Visual Studio
-- Comment/Uncomment for Rust code in editor
+- Manage the installation of Rust tools from within Visual Studio
 
 For a more detailed overview, see [Getting Started](getting_started.md).
 
