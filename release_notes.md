@@ -11,6 +11,20 @@ be free of charge.
 In the future, we plan to offer both free and commercial editions 
 of this extension.
 
+## 0.7 -- (9-December-2022)
+
+This extension remains far from polished, and is not yet feature complete,
+but we are now able to use it productively in actual Rust development work.
+
+Changes in this preview release:
+
+- The bundled copy of rust-analyzer has been updated
+- The project template feature has been brought back
+- New 'rustup' features to manage the installation and updates of Rust tools
+- Integration with Test Explorer has been removed, for now
+- Added a dropdown to the toolbar to configure profile for Build All
+- Lots of bug fixes
+
 ## 0.6 -- (18-October-2022)
 
 Still rough.  Released to show direction and progress:
