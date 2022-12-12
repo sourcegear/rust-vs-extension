@@ -16,7 +16,7 @@ or, as in this example, as a sibling to `Cargo.toml`.
       "type": "default",
       "name": "Bin: debug_launch_args/debug_launch_args",
       "project": "Cargo.toml",
-      "projectTarget": "debug_launch_args/debug_launch_args",
+      "projectTarget": "debug_launch_args/debug_launch_args/bin",
       "args": 
       [ 
           "--flag",
@@ -28,12 +28,15 @@ or, as in this example, as a sibling to `Cargo.toml`.
 ```
 
 - `type` must be "default"
-- `projectTarget` is the name of the package and the name of the target, separated by a slash
+- `projectTarget` is the three things, separated by slashes: the name of the package, the name of the target, and the kind of the target.
 - `project` must be "Cargo.toml"
-- `name` must be the same as projectTarget, except with "Bin: " or "Example: ", to indicate what kind of target.  Note the space after the colon.
+- `name` must be the name as it appears in the dropdown control in the toolbar.
 - `args` is a json array of strings, which will be the arguments passed to the executable being debugged
 
 The `launch.vs.json` feature is documented at:
 
 https://learn.microsoft.com/en-us/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio?view=vs-2022
+
+If you right-click on a target in Rust View and choose "Open Debug and Launch Settings", it will bring up the `launch.vs.json` file, and all of the fields except `args` should be pre-filled correctly.
+
 
