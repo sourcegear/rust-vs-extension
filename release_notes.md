@@ -12,13 +12,30 @@ SourceGear Rust is an extension for Visual Studio 2022.
 
 For a more detailed overview, see [Getting Started](getting_started.md).
 
-We are actively working on improvements and new features
-for upcoming releases.
+All versions prior to 1.0 will be marked as Preview.
 
-All versions prior to 1.0 will be marked as Preview, and will
-be free of charge.
-In the future, we plan to offer both free and commercial editions 
-of this extension.
+The 1.0 release (coming soon) is intended to be a "Minimum Viable Product",
+suitable for production use, and a stable foundation on which to build
+more features.
+
+In the future, probably in the 2.0 time frame, we plan to offer both 
+free and commercial editions of this extension.
+
+## 0.8 -- (9-January-2023)
+
+Although this remains a "Preview", we are finding it
+generally satisfactory for regular development work.
+
+We will be focused on bug fixes and polishing from
+here until 1.0.  Feedback is welcome.
+
+Changes in this preview release:
+
+- Support for Rust language options and the "map mode" scrollbar
+- Obtain (and update) rust-analayzer from rustup
+- Improvements to the handling of messages in Error List
+- Various improvements to 'rustup' UI features
+- Other bug fixes and performance improvements
 
 ## 0.7 -- (9-December-2022)
 
