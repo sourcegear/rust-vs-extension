@@ -12,6 +12,8 @@ SourceGear Rust is an extension for Visual Studio 2022.
 
 For a more detailed overview, see [Getting Started](getting_started.md).
 
+## Roadmap
+
 All versions prior to 1.0 will be marked as Preview.
 
 The 1.0 release (coming soon) is intended to be a "Minimum Viable Product",
