@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide is current as of preview version 0.6.
+This guide is current as of preview version 0.8.
 
 For a list of highlights about each release, see the [Release Notes](release_notes.md).
 
@@ -35,9 +35,8 @@ be available the next time you launch Visual Studio.
 
 ## Install the Rust development tools
 
-The current version of SourceGear Rust expects
-the Rust development tools to be installed separately.
-These tools include the Rust compiler and its package
+SourceGear Rust needs the usual Rust development tools to be
+installed and available in your PATH.  These include the Rust compiler and its package
 manager (Cargo) and various other things to support 
 development with Rust.
 
@@ -46,21 +45,31 @@ is called `rustup`:
 
 https://rustup.rs/
 
-SourceGear Rust will look for the Rust tools to be installed
-at the default location, which is `$(UserProfile)\.cargo\bin\`.
+If you like, you can maintain your Rust installation
+using `rustup` on the command line.  
+
+Alternatively,
+the SourceGear Rust extension can help with this task.
+When SourceGear Rust is activated, it checks to see
+if the necessary Rust development tools are available.
+If something is missing or out-of-date, an information
+bar will be displayed:
+
+![screenshot](vs_updates_available.png)
+
+The UI for managing the Rust tools installation looks
+like this:
+
+![screenshot](vs_manage_rust.png)
 
 ## About Rust projects in Visual Studio
 
-As of preview version 0.6, SourceGear Rust is based on Visual Studio's "Open Folder"
+SourceGear Rust is based on Visual Studio's "Open Folder"
 mode instead of project files and solutions.  This mode was
 added to Visual Studio to support build environments which have
 their own build system and therefore do not benefit from MSBuild.
 Other examples of extensions which use Open Folder include
 CMake, node.js, and Python.
-
-Because the New Project templates feature from 0.5 was based on
-project files, this feature has been removed in 0.6.  We are
-working to bring it back in a future release.
 
 To open a Rust project in Visual Studio, in the dialog box
 where Visual Studio asks "What would you like to do?", choose
@@ -79,6 +88,18 @@ what extensions are present.  The SourceGear Rust extension
 recognizes the Cargo.toml and Rust language files and provides Rust-specific features, such as the ability
 to build and debug, etc.
 
+## Creating a new Rust project
+
+As a starting point, SourceGear Rust can create a new project
+with a template.
+
+![screenshot](vs_create_new_project.png)
+
+The template(s) can be found by filtering on Rust as
+the language:
+
+![screenshot](sgrust_template.png)
+
 ## Intellisense
 
 SourceGear Rust includes support for rust-analyzer to provide
@@ -88,9 +109,9 @@ possibilities is displayed.
 
 ![screenshot](sgrust_rusqlite_intellisense.png)
 
-Currently, a copy of the rust-analyzer executable is being bundled within
-the SourceGear Rust VSIX.  In the future, we plan to provide
-the option of using one installed by rustup.
+Just as with cargo and the Rust compiler itself, the rust-analyzer executable is
+installed by `rustup`.  The extension will let you know if it
+needs to be installed or updated.
 
 ## Rust View
 
@@ -137,24 +158,13 @@ will set the Startup Item in the Visual Studio toolbar accordingly.
 Tapping the launch button to start the debugger should cause
 the "3d\_shapes" example to be built and launched.
 
-## Tests
-
-Version 0.6 adds preliminary support for integrating
-Cargo tests with the Visual Studio Test Explorer.  If you
-open the Test Explorer window with SourceGear Rust active,
-it supports discovery of tests as well as running the tests
-and reporting results.
-
-The following screenshot shows Test Explorer having run all
-the tests in the Wasmtime tree:
-
-![screenshot](sgrust_test_explorer_wasmtime.png)
-
 ## Error List
 
-Version 0.6 adds preliminary support for showing Rust compiler
-errors in the Visual Studio Error List.
+Rust compiler errors are shown in the Visual Studio Error List:
 
 ![screenshot](sgrust_error.png)
 
+If you double-click on an item in the Error List, the corresponding
+source code file will be opened at the location of the error or
+warning.
 
