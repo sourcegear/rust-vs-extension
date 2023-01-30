@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide is current as of preview version 0.8.
+This guide is current as of version 1.0.
 
 For a list of highlights about each release, see the [Release Notes](release_notes.md).
 

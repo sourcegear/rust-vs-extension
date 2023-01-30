@@ -14,14 +14,19 @@ For a more detailed overview, see [Getting Started](getting_started.md).
 
 ## Roadmap
 
-All versions prior to 1.0 will be marked as Preview.
-
-The 1.0 release (coming soon) is intended to be a "Minimum Viable Product",
+The 1.0 release is considered a "Minimum Viable Product",
 suitable for production use, and a stable foundation on which to build
-more features.
+more features.  We plan to continue improving the extension
+and making regular releases.
 
 In the future, probably in the 2.0 time frame, we plan to offer both 
 free and commercial editions of this extension.
+
+## 1.0 -- (30-January-2023)
+
+Changes in this preview release:
+
+- Bug fixes
 
 ## 0.8 -- (9-January-2023)
 
