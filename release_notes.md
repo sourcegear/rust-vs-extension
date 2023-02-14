@@ -22,9 +22,17 @@ and making regular releases.
 In the future, probably in the 2.0 time frame, we plan to offer both 
 free and commercial editions of this extension.
 
+## 1.1 -- (14-February-2023)
+
+Changes in this release:
+
+- New UI for debug configurations
+- Run `cargo test` from with the IDE
+- Support for Arm64 Visual Studio
+
 ## 1.0 -- (30-January-2023)
 
-Changes in this preview release:
+Changes in this release:
 
 - Bug fixes
 
