@@ -22,6 +22,12 @@ and making regular releases.
 In the future, probably in the 2.0 time frame, we plan to offer both 
 free and commercial editions of this extension.
 
+## 1.2 -- (23-August-2023)
+
+Changes in this release:
+
+- New UI for managing dependencies
+
 ## 1.1 -- (14-February-2023)
 
 Changes in this release:
