@@ -22,6 +22,12 @@ and making regular releases.
 In the future, probably in the 2.0 time frame, we plan to offer both 
 free and commercial editions of this extension.
 
+## 1.3 -- (29-January-2024)
+
+Changes in this release:
+
+- Fix a problem with Rust View that shows up with Visual Studio 17.8
+
 ## 1.2 -- (23-August-2023)
 
 Changes in this release:
